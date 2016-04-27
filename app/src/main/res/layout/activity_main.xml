@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="dbh.leo.com.databinding.entity.User" />
+
+        <import type="dbh.leo.com.databinding.entity.ObservableUser" />
+
+        <import type="dbh.leo.com.databinding.event.MyHandlers" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <variable
+            name="observableUser"
+            type="ObservableUser" />
+
+        <variable
+            name="handlers"
+            type="MyHandlers" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="dbh.leo.com.databinding.MainActivity">
+
+        <!--<android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize" />
+        </android.support.design.widget.AppBarLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{observableUser.name}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:text="test" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@{String.valueOf(observableUser.age)}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:text="30" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:gravity="center"
+                android:onClick="btnUpdate"
+                android:tag="@{observableUser.name + observableUser.age}"
+                android:text="update"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>
