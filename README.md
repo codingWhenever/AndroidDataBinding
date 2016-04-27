@@ -2,7 +2,7 @@
 
 something about Android Data Binding based on Data Binding Guide
 
-本问是跟着 官网Data Binding Guide 学习过程中得出的一些实践经验，希望对各位有所帮助
+本文是跟着 官网Data Binding Guide 学习过程中得出的一些实践经验，希望对各位有所帮助
 
 1.准备
 
